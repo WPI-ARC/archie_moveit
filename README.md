@@ -3,21 +3,36 @@ Archie Moveit
 
 # Install
 
+In order to 
 ## on laptop side:
+Go to src folder in catkin workspace and download required packages:
+    
+    sudo apt-get install ros-groovy-rviz
+    git clone git@github.com:ros-drivers/openni2_launch.git
+    git clone https://github.com/WPI-ARC/person_tracker.git
+    git clone https://github.com/WPI-ARC/pr2_moveit_generated.git
 
-    cd $ROS_PACKACKAGE_PATH/src
-    git clone 
-    git clone ...
+Go back one level and make all downloaded packages:
+    
+    cd ..
     catkin_make
     
 ## on PR2 side:
+Go to catkin workspace and download archie_moveit package.
 
-    cd $ROS_PACKACKAGE_PATH/src
-    git clone 
-    git clone ...
+    git clone https://github.com/WPI-ARC/archie_moveit.git
+
+Go back one level and make the package:
+
     catkin_make
 
 # Run
+
+## on PR2 side:
+
+Run the launch file on PR2 side before running launch files on laptop side.
+
+    roslaunch archie_moveit move_group.launch 
 
 ## on laptop side:
 
@@ -27,39 +42,6 @@ Archie Moveit
     rosrun person_tracker opencv_tracker
     rosrun person_tracker moveit_object_sender
     
-### (2) Launch robot motion planning interface
+### (2) Launch moveit motion planning interface
     
     roslaunch pr2_moveit_generated moveit_rviz.launch
-
-## on PR2 side:
-
-    roslaunch archie_moveit move_group.launch 
-
-------------------------------------------------
-
-OR KINECT
-==========================
-
-MODES:
-    (a) Recording (Listening)
-    (b) Playback
-
-
-# (a) Recording
-
-### (i) Set options
-
-Before one can begin recording, there are a few settings that must be edited in the class_runSensors.py file.  Namely:
-
-    self.prob.SendCommand('SetCustomTracker 1')
-
-This tells the orkinect plugin which kinect topic to subscribe to. In order to have more than 1 kinect, you must use the multi tracker.
-
-    0 will use openni_tracker
-    1 will use the custom openni_tracker_multi
-    
-    self.prob.SendCommand('SetNumKinect 1') #still need to call as 1 if using default tracker.
-
-Sets the number of kinects to subscribe to.  This needs to be set to 1 even if using the original skeleton tracker
-
-....
