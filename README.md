@@ -1,6 +1,8 @@
 Archie Moveit
 ==========================
 
+Human-Computer Safety System, utilized Moveit motion planning software, can be used to generate online trajectories with respect to human safety in PR2's workspace, according to human's position and the movement of PR2's arm relative to human.
+
 # Install
 
 In order to use Human-Robot Safety System, you have to install ros pakcages both on laptop side and PR2 side.
