@@ -44,6 +44,8 @@ Run the launch file on PR2 side before running launch files on laptop side.
 
 ## on PR2 side:
 
+Run move group on PR2.
+
     roslaunch archie_moveit move_group.launch 
 
 ## on laptop side:
