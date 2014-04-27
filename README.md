@@ -21,6 +21,8 @@ Go back one level and make all downloaded packages:
 Go to catkin workspace and download archie_moveit package.
 
     git clone https://github.com/WPI-ARC/archie_moveit.git
+    git clone https://github.com/WPI-ARC/moveit_core.git
+    git clone https://github.com/WPI-ARC/moveit_ros.git
 
 Go back one level and make the package:
 
