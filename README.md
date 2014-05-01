@@ -15,6 +15,7 @@ Go to src folder in catkin workspace and download required packages:
     
     sudo apt-get install ros-groovy-rviz
     sudo apt-get install ros-groovy-openni-camera
+    git clone git@github.com:ros-drivers/rgbd_launch.git
     git clone git@github.com:ros-drivers/openni2_launch.git
     git clone https://github.com/WPI-ARC/person_tracker.git
     git clone https://github.com/WPI-ARC/pr2_moveit_generated.git
