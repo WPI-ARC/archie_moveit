@@ -31,8 +31,8 @@ Three packages are required to be installed on PR2 side:
 Go to catkin workspace and download archie_moveit package.
 
     git clone https://github.com/WPI-ARC/archie_moveit.git
-    git clone https://github.com/WPI-ARC/moveit_core.git
-    git clone https://github.com/WPI-ARC/moveit_ros.git
+    git clone -b quan_demo https://github.com/WPI-ARC/moveit_core.git
+    git clone -b quan_demo https://github.com/WPI-ARC/moveit_ros.git
 
 Go back one level and make downloaded packages:
 
